@@ -1,0 +1,11 @@
+function SetType(type) {
+	this.WhoAmI = "I'm the "+type+" object";
+}
+
+var newObject = {};
+SetType.call(newObject, "newObject");
+alert(newObject.WhoAmI); // I'm the newObject object
+
+var new2 = {};
+SetType.apply(new2, ["new2"]);
+alert(new2.WhoAmI); // I'm the new2 object
